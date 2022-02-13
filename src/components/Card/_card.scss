@@ -1,0 +1,44 @@
+.card {
+    @include flexMixin(column, space-between, normal);
+    width: 350px;
+    overflow: hidden;
+    padding: 8px;
+    background: #ffffff;
+    border-radius: 40px;
+    border: 1px solid black;
+    margin-right: 22px;
+    margin-bottom: 22px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &__footer {
+      padding: 24px;
+      background: #776fc3;
+      border-radius: 32px;
+    }
+    &__title {
+      @include textMixin(32px, 37px, white);
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+    &__description {
+      @include textMixin(18px, 21px, lighten($mainPurple, 40));
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+    &__priceBlock {
+      @include flexMixin(row, space-between, center);
+    }
+    &__price {
+      @include textMixin(20px, 24px, white);
+    }
+    &__add {
+      @include flexMixin(row, center, center);
+      cursor: pointer;
+      width: 61px;
+      height: 61px;
+      border: none;
+      background-color: darken($color: $mainPurple, $amount: 8);
+      border-radius: 50%;
+    }
+  }

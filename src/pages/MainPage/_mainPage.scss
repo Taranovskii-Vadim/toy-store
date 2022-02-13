@@ -1,0 +1,11 @@
+.mainPage {
+  &__header {
+    @include flexMixin(row, space-between, center);
+    width: 22%;
+  }
+}
+
+.items {
+  @include flexMixin(row, center, normal);
+  flex-wrap: wrap;
+}

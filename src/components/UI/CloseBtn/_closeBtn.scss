@@ -1,0 +1,10 @@
+.closeBtn {
+  @include flexMixin(row, center, center);
+  padding: 5px;
+  cursor: pointer;
+  background-color: $mainPurple;
+  border-radius: 50%;
+  .plus {
+    transform: rotate(45deg);
+  }
+}

@@ -1,0 +1,15 @@
+.searchForm {
+  margin-left: auto;
+  &__inp {
+    padding: 12px 24px;
+    font-weight: 500;
+    font-size: 16px;
+    color: $mainPurple;
+    border: 1px solid #e7e7e7;
+    border-radius: 24px;
+    background: url(../../images/search.svg) no-repeat center right 27px;
+    &::placeholder {
+      color: $mainPurple;
+    }
+  }
+}

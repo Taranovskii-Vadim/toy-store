@@ -1,0 +1,37 @@
+.navbar {
+  width: 25%;
+  &__title {
+    @include textMixin(28px, 32px, $mainPurple);
+    margin-bottom: 112px;
+    font-weight: bold;
+  }
+}
+.sections {
+  .section {
+    @include flexMixin(row, space-between, center);
+    position: relative;
+    border: 1px solid #e7e7e7;
+    padding: 20px 20px;
+    border-radius: 40px;
+    margin-bottom: 25px;
+    transition: all 0.5s linear;
+    &::after {
+      content: "";
+      display: inline-block;
+      transition: all 0.5s linear;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      border-radius: 40px;
+      width: 0;
+      height: 100%;
+      background-color: lighten($color: $mainPurple, $amount: 14);
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

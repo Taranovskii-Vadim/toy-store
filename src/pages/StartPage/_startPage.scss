@@ -1,0 +1,3 @@
+.startPage {
+  @include flexMixin(row, space-between, normal);
+}

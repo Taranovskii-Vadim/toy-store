@@ -1,0 +1,69 @@
+.overlay {
+  @include flexMixin(row, center, center);
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+}
+.cart {
+  @include flexMixin(column, space-between, normal);
+  width: 800px;
+  height: 500px;
+  padding: 35px;
+  background-color: white;
+  border-radius: 40px;
+  &__block {
+    @include flexMixin(row, space-between, center);
+  }
+  &__header {
+    margin-bottom: 15px;
+  }
+  &__item {
+    @include flexMixin(row, space-between, center);
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__title {
+    @include textMixin(45px, 45px, $mainPurple);
+  }
+  &__main {
+    height: 80%;
+    overflow-y: auto;
+  }
+  &__image {
+    width: 50px;
+    height: 50px;
+    background-color: grey;
+  }
+  &__info {
+    @include flexMixin(row, space-between, center);
+    @include textMixin(18px, 18px, $mainPurple);
+    width: 33%;
+  }
+  &__delete {
+    @include flexMixin(row, center, center);
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid $mainPurple;
+    border-radius: 50%;
+    .plus {
+      transform: rotate(45deg);
+    }
+  }
+  &__final {
+    @include textMixin(25px, 25px, $mainPurple);
+  }
+  &__done {
+    @include textMixin(14px, 14px, white);
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: $mainPurple;
+    padding: 15px;
+    border: none;
+    border-radius: 40px;
+  }
+}

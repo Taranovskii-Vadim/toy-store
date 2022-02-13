@@ -1,0 +1,12 @@
+.slaider {
+  width: 73%;
+  &__title {
+    @include textMixin(80px, 92px, $mainPurple);
+    margin-bottom: 56px;
+    font-weight: bold;
+  }
+  &__items {
+    @include flexMixin(row, normal, normal);
+  }
+}
+
